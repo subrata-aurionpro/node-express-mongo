@@ -39,3 +39,6 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/", authRoute);
+app.get("/", function (req, res, next) {
+  res.status(200).json({msg: "API working"});
+});
